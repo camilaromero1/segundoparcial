@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <title>reveal.js</title>
+
+        <link rel="stylesheet" href="dist/reset.css">
+        <link rel="stylesheet" href="dist/reveal.css">
+        <link rel="stylesheet" href="dist/theme/dracula.css">
+
+        <!-- Theme used for syntax highlighted code -->
+        <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
+                <section data-transition="zoom">
+                    <p>Investigación Operativa</p>
+                    <h1>CAMILA²</h1>
+                    <p>Camila Irigoin - Camila Romero</p>
+                </section>
+                <section data-auto-animate>
+                        <h3>¿Qué son las simulaciones?</h3>
+                </section>
+                    <section data-auto-animate>
+                        <h3>¿Qué son las simulaciones?</h3>
+                        <p>Las simulaciones son métodos o técnicas que permiten estudiar el comportamiento de sistemas complejos y hacer predicciones sin necesidad de realizar experimentos físicos. </p>
+                        <p>Una simulación de Montecarlo es un modelo que utiliza muestreo aleatorio repetido para predecir la probabilidad de distintos resultados, considerando la influencia de variables aleatorias.
+						</p>
+                        <p>Para que los resultados sean estadísticamente significativos, se suelen realizar miles o millones de repeticiones.</p>
+                        
+                    
+                    </section>
+                <section data-auto-animate>
+                    <h2> Origen e historia</h2>
+                </section>
+                    <section data-auto-animate>
+                        <h2> Origen e historia</h2>
+                        <p> Fue desarrollado y popularizado en los años 40 por Stanislaw Ulam y John von Neumann, científicos que trabajaban en el proyecto Manhattan.
+                        </p>
+                        <p>Ulam tuvo la idea inicial mientras jugaba solitario, pensando en calcular probabilidades usando muestreos aleatorios.</p>
+                        <p> Von Neumann programó la primera implementación en la computadora ENIAC. </p>
+                    
+                    </section>
+                <section data-transition="fade">
+                        <h2> Pasos para realizar una simulación de Montecarlo</h2>
+                    </section>
+                <section data-auto-animate>
+                            <h3>El procedimiento básico incluye:</h3>
+                    </section>
+                    <section data-auto-animate>
+                        <h3>El procedimiento básico incluye:</h3>
+                        <p>1. Definir el problema</p>
+                        <p>2. Identificar las variables aleatorias</p>
+                        <p>3. Asignar distribuciones de probabilidad</p>
+                        <p>4. Generar valores aleatorios</p>
+                        <p>5. Evaluar los resultados</p>
+                        <p>6. Analizar estadísticamente</p>
+                </section>
+                <section data-auto-animate>
+                        <h4>Ejemplo Práctico</h4>
+                        <h3>Simulación de un juego de lanzamiento de moneda</h3>
+                        <p>Objetivo: Calcular la probabilidad de obtener "cara" al menos 3 veces en 5 lanzamientos.</p>
+                </section>
+                <section data-transition="concave">
+                        <h2>1. Definir el problema y el modelo</h2>
+                        <p>Queremos simular 5 lanzamientos de una moneda donde cada lanzamiento tiene una probabilidad de 50% de resultar en "cara" y 50% en "cruz". Repetiremos este experimento muchas veces para ver con qué frecuencia obtenemos al menos 3 "caras".</p>
+                    </section>
+                    <section data-transition="concave">
+                        <h2>2. Identificar las variables aleatorias</h2>
+                        <p>Cada lanzamiento es una variable aleatoria con dos resultados posibles: "cara" o "cruz".</p>
+                    </section>
+                    <section data-transition="concave">
+                    <h2>3. Asignar una distribución de probabilidad</h2>
+                    <p>Usamos una distribución uniforme ya que cada lanzamiento tiene una probabilidad igual de resultar en "cara" o "cruz".</p>
+                    </section>
+                    <section data-transition="concave">
+                        <h2>4. Generar valores aleatorios en cada iteración</h2>
+                        <p>Para cada iteración (es decir, cada simulación de 5 lanzamientos), generamos 5 resultados aleatorios de "cara" o "cruz".</p>
+                    </section>
+                    <section data-transition="concave">
+                        <h2>5. Evaluar los resultados</h2>
+                        <p>Contamos cuántas veces obtenemos "cara" en cada simulación de 5 lanzamientos. Si obtenemos 3 o más "caras", contamos la simulación como un éxito.</p>
+                    </section>
+                    <section data-transition="concave">
+                        <h2>6. Analizar estadísticamente los resultados</h2>
+                        <p>Realizamos 10,000 simulaciones del juego (es decir, 10,000 repeticiones de 5 lanzamientos cada una) para obtener resultados estadísticamente significativos.</p>
+                    </section>
+                    <section data-auto-animate>
+                        <h2>Ejemplo de resultado</h2>
+                        <p>Simulaciones exitosas (con al menos 3 "caras"): 6,250 de 10,000.</p>
+                        <p>Probabilidad estimada de éxito: 6250/10000 = 0.625 o 62.5%.</p>
+                </section>
+                <section data-transition="fade">
+                    <h2>Ventajas y desventajas</h2>
+                </section>
+                <section data-transition="concave">
+                    <h3>Ventajas</h3>
+                    <p>Flexibilidad y versatilidad: Se adaptan a una gran variedad de problemas con variables y condiciones inciertas.</p>
+                    <p>Modela la incertidumbre: Proporciona una visión más completa al trabajar con distribuciones de probabilidad en lugar de valores fijos.</p>
+                    <p>Fomenta la toma de decisiones informada: Al permitir ver rangos de posibles resultados, ayuda a evaluar el riesgo y tomar decisiones basadas en datos.</p>
+                </section>
+                <section data-transition="fade">
+                    <h3>Desventajas</h3>
+                    <p>Necesita alta capacidad computacional: Requiere numerosos cálculos, lo que demanda tiempos de procesamiento largos o máquinas potentes.</p>
+                    <p>Calidad de resultados depende de la precisión del modelo: Si el modelo no representa adecuadamente la realidad, los resultados pueden ser inexactos.</p>
+                    <p>Genera resultados probabilísticos, no exactos: Aunque se obtienen estimaciones de riesgo y probabilidad, no garantiza resultados precisos en todos los escenarios.</p>
+                </section>
+                <section data-transition="fade">
+                    <h3>Importancia y evolución de Montecarlo en la era de la computación avanzada</h3>
+                </section>
+                <section data-transition="concave">
+                    <p>Con el avance en poder computacional, el método de Montecarlo se ha vuelto cada vez más preciso y rápido. Las tecnologías de procesamiento paralelo, como la computación en GPU, y el uso de plataformas en la nube han permitido ejecutar simulaciones de manera mucho más rápida, lo cual ha ampliado el alcance de su aplicación en tiempo real. </p>
+                    <p>Actualmente, Montecarlo se aplica en problemas complejos como:</p>
+                </section>
+                <section data-transition="fade">
+                    <p>Predicción en tiempo real: En sistemas de finanzas o en toma de decisiones automatizada.</p>
+                    <p>Optimización en sistemas de logística: En aplicaciones como Amazon o Walmart para mejorar rutas de distribución.</p>
+                    <p>Diseño en inteligencia artificial: Especialmente en simulación de aprendizaje de agentes inteligentes en escenarios variados</p>
+                </section>
+                <section data-transition="fade">
+                    <h2>Aplicaciones de las simulaciones de Montecarlo</h2>
+                </section>
+                <section data-transition="concave">
+                    <p>Finanzas y economía: Para prever precios de acciones, calcular riesgos en inversiones, optimizar carteras y evaluar proyectos de inversión bajo condiciones de incertidumbre.</p>
+                    <p>Ingeniería y manufactura: Para analizar confiabilidad, evaluar sistemas de calidad, y realizar pruebas de diseño de productos en condiciones variables sin necesidad de fabricar físicamente prototipos.</p>
+                    <p>Ciencias físicas y biológicas: En física nuclear, biología, y genética, se usa para modelar sistemas complejos, como la reacción de partículas subatómicas, la propagación de enfermedades o estudios de genética.</p>
+                </section>
+                <section>
+                    <p>Gestión de proyectos: Para estimar plazos, costos, y evaluar los riesgos asociados a diferentes escenarios.</p>
+                    <p>Meteorología: Predicción del clima, modelado de fenómenos atmosféricos y estudios de cambio climático.</p>
+                </section>
+                
+        </div>
+
+        <script src="dist/reveal.js"></script>
+        <script src="plugin/notes/notes.js"></script>
+        <script src="plugin/markdown/markdown.js"></script>
+        <script src="plugin/highlight/highlight.js"></script>
+        <script>
+            // More info about initialization & config:
+            // - https://revealjs.com/initialization/
+            // - https://revealjs.com/config/
+            Reveal.initialize({
+                hash: true,
+
+                // Learn about plugins: https://revealjs.com/plugins/
+                plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+            });
+        </script>
+    </body>
+</html>
+
